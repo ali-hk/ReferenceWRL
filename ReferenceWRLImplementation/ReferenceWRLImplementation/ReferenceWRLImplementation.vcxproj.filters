@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Foundation">
+      <UniqueIdentifier>{91f3a233-8eb5-44ad-a186-cc015f0e68e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="idl">
+      <UniqueIdentifier>{9dac0764-d2d3-49f4-a4c6-74049780743b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dll">
+      <UniqueIdentifier>{b227e329-4fbe-4f9f-99e0-b07a564e6f72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{e676e4f4-4996-4df1-a40e-59f426831855}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <Filter>dll</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\BasicClass.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\SomeOtherType.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Foundation\AsyncOperation.h">
+      <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="Foundation\ErrorHandling.h">
+      <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="Foundation\LifespanTracker.h">
+      <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="Foundation\Map.h">
+      <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="Foundation\Vector.h">
+      <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="Foundation\WinStringBuilder.h">
+      <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="Foundation\WinStringWrapper.h">
+      <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="Macros.h" />
+    <ClInclude Include="lib\BasicClass.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SomeOtherType.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="idl\ReferenceWRLImplementation.idl">
+      <Filter>idl</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReferenceWRLImplementation.def">
+      <Filter>dll</Filter>
+    </None>
+  </ItemGroup>
+</Project>

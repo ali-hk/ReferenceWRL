@@ -1,0 +1,70 @@
+import "oaidl.idl";
+import "ocidl.idl";
+import "Inspectable.idl";
+import "Windows.Foundation.idl";
+
+namespace ReferenceWRLImplementation
+{
+	[contractversion(1)]
+	apicontract ReferenceContract
+	{
+	}
+
+	interface ISomeOtherType;
+	runtimeclass SomeOtherType;
+
+	[uuid(a7bf2f2b-115b-4fbf-9b40-0fb434779668)]
+	[contract(ReferenceContract, 1)]
+	interface IBasicClass : IInspectable
+	{
+		HRESULT BasicMethod();
+		HRESULT MethodWithBaseTypeParameter([in] UINT32 intParam);
+		HRESULT MethodWithStringParameter([in] HSTRING strParam);
+		HRESULT MethodWithReferenceTypeParameter([in] ISomeOtherType* refParam);
+
+		HRESULT MethodWithBaseTypeReturnValue([out, retval] UINT32* intRetVal);
+		HRESULT MethodWithStringReturnValue([out, retval] HSTRING* strRetVal);
+		HRESULT MethodWithReferenceTypeReturnValue([out, retval] ISomeOtherType** refTypeRetVal);
+
+		[propget] HRESULT BaseTypeProperty([out, retval] UINT32* intValue);
+		[propput] HRESULT BaseTypeProperty([in] UINT32 intValue);
+
+		[propget] HRESULT StringProperty([out, retval] HSTRING* strValue);
+		[propput] HRESULT StringProperty([in] HSTRING strValue);
+
+		[propget] HRESULT RefTypeProperty([out, retval] ISomeOtherType** refValue);
+		[propput] HRESULT RefTypeProperty([in] ISomeOtherType* refValue);
+	}
+
+	[contract(ReferenceContract, 1)]
+	[activatable(ReferenceContract, 1)]
+	[marshaling_behavior(agile)]
+	runtimeclass BasicClass
+	{
+		[default] interface IBasicClass;
+	}
+	
+	[uuid(5246fb01-553f-4666-8b3a-e82b3078eb38)]
+	[contract(ReferenceContract, 1)]
+	interface ISomeOtherType : IInspectable
+	{
+	}
+
+	[contract(ReferenceContract, 1)]
+	[activatable(ReferenceContract, 1)]
+	[marshaling_behavior(agile)]
+	runtimeclass SomeOtherType
+	{
+		[default] interface ISomeOtherType;
+	}
+
+	/* TODO:
+	-Props
+	-Activatable
+	-Static
+	-Collections
+	-Async
+	-Template project
+	-Template .cpp/.h files
+	*/
+}
