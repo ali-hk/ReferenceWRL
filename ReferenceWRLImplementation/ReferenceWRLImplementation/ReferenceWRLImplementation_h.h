@@ -6,7 +6,7 @@
  /* File created by MIDL compiler version 8.00.0613 */
 /* at Mon Jan 18 19:14:07 2038
  */
-/* Compiler settings for C:\Users\ALKHAY~1\AppData\Local\Temp\ReferenceWRLImplementation.idl-de1031dc:
+/* Compiler settings for C:\Users\ALKHAY~1\AppData\Local\Temp\ReferenceWRLImplementation.idl-7ac7f2c1:
     Oicf, W1, Zp8, env=Win64 (32b run), target_arch=AMD64 8.00.0613 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
