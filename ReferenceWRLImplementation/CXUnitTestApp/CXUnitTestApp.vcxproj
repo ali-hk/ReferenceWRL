@@ -187,7 +187,9 @@
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ActivatableStaticClassUnitTests.cpp" />
     <ClCompile Include="ParameterizedConstructorClassUnitTests.cpp" />
+    <ClCompile Include="StaticClassUnitTests.cpp" />
     <ClCompile Include="UnitTestApp.xaml.cpp">
       <DependentUpon>UnitTestApp.xaml</DependentUpon>
     </ClCompile>

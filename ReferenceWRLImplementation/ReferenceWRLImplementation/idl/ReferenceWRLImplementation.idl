@@ -101,6 +101,63 @@ namespace ReferenceWRLImplementation
         [default] interface IParameterizedConstructorClass;
     }
 
+
+    // StaticClass is projected as a purely static class with only static methods
+
+    // Forward-declare StaticClass to allow specifying exclusiveto
+    // for static factory
+    runtimeclass StaticClass;
+
+    [uuid(db7daa62-3130-45a5-826a-152c577336c1)]
+    [contract(ReferenceContract, 1)]
+    [exclusiveto(StaticClass)]
+    interface IStaticClassStatics : IInspectable
+    {
+        HRESULT StaticMethodWithNoParameters();
+        HRESULT StaticMethodWithParam([in] UINT32 intParam);
+        HRESULT StaticMethodWithRetVal([out, retval] UINT32* intRetVal);
+    }
+
+    [contract(ReferenceContract, 1)]
+    [static(IStaticClassStatics, ReferenceContract, 1)]
+    [marshaling_behavior(agile)]
+    [threading(both)]
+    runtimeclass StaticClass
+    {
+    }
+
+    // ActivatableStaticClass is projected as a constructable (non-static) class with
+    // static methods
+
+    // Forward-declare ActivatableStaticClass to allow specifying exclusiveto
+    // for static factory
+    runtimeclass ActivatableStaticClass;
+
+    [uuid(8b4df47f-1caf-44b6-9f85-678fe74e6c5e)]
+    [contract(ReferenceContract, 1)]
+    [exclusiveto(ActivatableStaticClass)]
+    interface IActivatableStaticClassStatics : IInspectable
+    {
+        HRESULT StaticMethod([out, retval] UINT32* intRetVal);
+    }
+
+    [uuid(803f0506-7f74-4dc5-8e95-9551ae383b14)]
+    [contract(ReferenceContract, 1)]
+    interface IActivatableStaticClass : IInspectable
+    {
+        HRESULT NonStaticMethod([out, retval] UINT32* intRetVal);
+    }
+
+    [contract(ReferenceContract, 1)]
+    [activatable(ReferenceContract, 1)]
+    [static(IActivatableStaticClassStatics, ReferenceContract, 1)]
+    [marshaling_behavior(agile)]
+    [threading(both)]
+    runtimeclass ActivatableStaticClass
+    {
+        [default] interface IActivatableStaticClass;
+    }
+
     /* TODO:
     -Props
     -Activatable
@@ -108,7 +165,7 @@ namespace ReferenceWRLImplementation
     -Collections
     -Async
     -Template project
-    -Template .cpp/.h files
+    -Template .cpp/.h files (each type of class)
     -C++ WRL client
     */
 }

@@ -6,7 +6,7 @@
  /* File created by MIDL compiler version 8.00.0613 */
 /* at Mon Jan 18 19:14:07 2038
  */
-/* Compiler settings for C:\Users\ALKHAY~1\AppData\Local\Temp\ReferenceWRLImplementation.idl-87a2dfe2:
+/* Compiler settings for C:\Users\ALKHAY~1\AppData\Local\Temp\ReferenceWRLImplementation.idl-e9a3309c:
     Oicf, W1, Zp8, env=Win64 (32b run), target_arch=AMD64 8.00.0613 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
@@ -116,6 +116,54 @@ namespace ABI {
 #endif /* __cplusplus */
 
 #endif 	/* ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_FWD_DEFINED__ */
+
+
+#ifndef ____x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_FWD_DEFINED__
+#define ____x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_FWD_DEFINED__
+typedef interface __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics;
+
+#ifdef __cplusplus
+namespace ABI {
+    namespace ReferenceWRLImplementation {
+        interface IStaticClassStatics;
+    } /* end namespace */
+} /* end namespace */
+
+#endif /* __cplusplus */
+
+#endif 	/* ____x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_FWD_DEFINED__ */
+
+
+#ifndef ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_FWD_DEFINED__
+#define ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_FWD_DEFINED__
+typedef interface __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics;
+
+#ifdef __cplusplus
+namespace ABI {
+    namespace ReferenceWRLImplementation {
+        interface IActivatableStaticClassStatics;
+    } /* end namespace */
+} /* end namespace */
+
+#endif /* __cplusplus */
+
+#endif 	/* ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_FWD_DEFINED__ */
+
+
+#ifndef ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_FWD_DEFINED__
+#define ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_FWD_DEFINED__
+typedef interface __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass;
+
+#ifdef __cplusplus
+namespace ABI {
+    namespace ReferenceWRLImplementation {
+        interface IActivatableStaticClass;
+    } /* end namespace */
+} /* end namespace */
+
+#endif /* __cplusplus */
+
+#endif 	/* ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_FWD_DEFINED__ */
 
 
 /* header files for imported files */
@@ -863,6 +911,9 @@ EXTERN_C const IID IID___x_ABI_CReferenceWRLImplementation_CIParameterizedConstr
 #define RUNTIMECLASS_ReferenceWRLImplementation_ParameterizedConstructorClass_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_ReferenceWRLImplementation_ParameterizedConstructorClass[] = L"ReferenceWRLImplementation.ParameterizedConstructorClass";
 #endif
+#if !defined(____x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_INTERFACE_DEFINED__)
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_ReferenceWRLImplementation_IStaticClassStatics[] = L"ReferenceWRLImplementation.IStaticClassStatics";
+#endif /* !defined(____x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_INTERFACE_DEFINED__) */
 
 
 /* interface __MIDL_itf_ReferenceWRLImplementation_0000_0004 */
@@ -872,6 +923,437 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Referenc
 
 extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0004_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0004_v0_0_s_ifspec;
+
+#ifndef ____x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_INTERFACE_DEFINED__
+#define ____x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_INTERFACE_DEFINED__
+
+/* interface __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics */
+/* [uuid][object] */ 
+
+
+
+/* interface ABI::ReferenceWRLImplementation::IStaticClassStatics */
+/* [uuid][object] */ 
+
+
+EXTERN_C const IID IID___x_ABI_CReferenceWRLImplementation_CIStaticClassStatics;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    } /* end extern "C" */
+    namespace ABI {
+        namespace ReferenceWRLImplementation {
+            
+            MIDL_INTERFACE("db7daa62-3130-45a5-826a-152c577336c1")
+            IStaticClassStatics : public IInspectable
+            {
+            public:
+                virtual HRESULT STDMETHODCALLTYPE StaticMethodWithNoParameters( void) = 0;
+                
+                virtual HRESULT STDMETHODCALLTYPE StaticMethodWithParam( 
+                    /* [in] */ UINT32 intParam) = 0;
+                
+                virtual HRESULT STDMETHODCALLTYPE StaticMethodWithRetVal( 
+                    /* [out][retval] */ UINT32 *intRetVal) = 0;
+                
+            };
+
+            extern const __declspec(selectany) IID & IID_IStaticClassStatics = __uuidof(IStaticClassStatics);
+
+            
+        }  /* end namespace */
+    }  /* end namespace */
+    extern "C" { 
+    
+#else 	/* C style interface */
+
+    typedef struct __x_ABI_CReferenceWRLImplementation_CIStaticClassStaticsVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIids )( 
+            __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics * This,
+            /* [out] */ ULONG *iidCount,
+            /* [size_is][size_is][out] */ IID **iids);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+            __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics * This,
+            /* [out] */ HSTRING *className);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+            __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics * This,
+            /* [out] */ TrustLevel *trustLevel);
+        
+        HRESULT ( STDMETHODCALLTYPE *StaticMethodWithNoParameters )( 
+            __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *StaticMethodWithParam )( 
+            __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics * This,
+            /* [in] */ UINT32 intParam);
+        
+        HRESULT ( STDMETHODCALLTYPE *StaticMethodWithRetVal )( 
+            __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics * This,
+            /* [out][retval] */ UINT32 *intRetVal);
+        
+        END_INTERFACE
+    } __x_ABI_CReferenceWRLImplementation_CIStaticClassStaticsVtbl;
+
+    interface __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics
+    {
+        CONST_VTBL struct __x_ABI_CReferenceWRLImplementation_CIStaticClassStaticsVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_StaticMethodWithNoParameters(This)	\
+    ( (This)->lpVtbl -> StaticMethodWithNoParameters(This) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_StaticMethodWithParam(This,intParam)	\
+    ( (This)->lpVtbl -> StaticMethodWithParam(This,intParam) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_StaticMethodWithRetVal(This,intRetVal)	\
+    ( (This)->lpVtbl -> StaticMethodWithRetVal(This,intRetVal) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* ____x_ABI_CReferenceWRLImplementation_CIStaticClassStatics_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_ReferenceWRLImplementation_0000_0005 */
+/* [local] */ 
+
+#ifndef RUNTIMECLASS_ReferenceWRLImplementation_StaticClass_DEFINED
+#define RUNTIMECLASS_ReferenceWRLImplementation_StaticClass_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_ReferenceWRLImplementation_StaticClass[] = L"ReferenceWRLImplementation.StaticClass";
+#endif
+#ifdef __cplusplus
+namespace ABI {
+namespace ReferenceWRLImplementation {
+class ActivatableStaticClass;
+} /*ReferenceWRLImplementation*/
+}
+#endif
+
+#if !defined(____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_INTERFACE_DEFINED__)
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_ReferenceWRLImplementation_IActivatableStaticClassStatics[] = L"ReferenceWRLImplementation.IActivatableStaticClassStatics";
+#endif /* !defined(____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_INTERFACE_DEFINED__) */
+
+
+/* interface __MIDL_itf_ReferenceWRLImplementation_0000_0005 */
+/* [local] */ 
+
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0005_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0005_v0_0_s_ifspec;
+
+#ifndef ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_INTERFACE_DEFINED__
+#define ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_INTERFACE_DEFINED__
+
+/* interface __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics */
+/* [uuid][object] */ 
+
+
+
+/* interface ABI::ReferenceWRLImplementation::IActivatableStaticClassStatics */
+/* [uuid][object] */ 
+
+
+EXTERN_C const IID IID___x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    } /* end extern "C" */
+    namespace ABI {
+        namespace ReferenceWRLImplementation {
+            
+            MIDL_INTERFACE("8b4df47f-1caf-44b6-9f85-678fe74e6c5e")
+            IActivatableStaticClassStatics : public IInspectable
+            {
+            public:
+                virtual HRESULT STDMETHODCALLTYPE StaticMethod( 
+                    /* [out][retval] */ UINT32 *intRetVal) = 0;
+                
+            };
+
+            extern const __declspec(selectany) IID & IID_IActivatableStaticClassStatics = __uuidof(IActivatableStaticClassStatics);
+
+            
+        }  /* end namespace */
+    }  /* end namespace */
+    extern "C" { 
+    
+#else 	/* C style interface */
+
+    typedef struct __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStaticsVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIids )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics * This,
+            /* [out] */ ULONG *iidCount,
+            /* [size_is][size_is][out] */ IID **iids);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics * This,
+            /* [out] */ HSTRING *className);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics * This,
+            /* [out] */ TrustLevel *trustLevel);
+        
+        HRESULT ( STDMETHODCALLTYPE *StaticMethod )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics * This,
+            /* [out][retval] */ UINT32 *intRetVal);
+        
+        END_INTERFACE
+    } __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStaticsVtbl;
+
+    interface __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics
+    {
+        CONST_VTBL struct __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStaticsVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_StaticMethod(This,intRetVal)	\
+    ( (This)->lpVtbl -> StaticMethod(This,intRetVal) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassStatics_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_ReferenceWRLImplementation_0000_0006 */
+/* [local] */ 
+
+#if !defined(____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_INTERFACE_DEFINED__)
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_ReferenceWRLImplementation_IActivatableStaticClass[] = L"ReferenceWRLImplementation.IActivatableStaticClass";
+#endif /* !defined(____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_INTERFACE_DEFINED__) */
+
+
+/* interface __MIDL_itf_ReferenceWRLImplementation_0000_0006 */
+/* [local] */ 
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0006_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0006_v0_0_s_ifspec;
+
+#ifndef ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_INTERFACE_DEFINED__
+#define ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_INTERFACE_DEFINED__
+
+/* interface __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass */
+/* [uuid][object] */ 
+
+
+
+/* interface ABI::ReferenceWRLImplementation::IActivatableStaticClass */
+/* [uuid][object] */ 
+
+
+EXTERN_C const IID IID___x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    } /* end extern "C" */
+    namespace ABI {
+        namespace ReferenceWRLImplementation {
+            
+            MIDL_INTERFACE("803f0506-7f74-4dc5-8e95-9551ae383b14")
+            IActivatableStaticClass : public IInspectable
+            {
+            public:
+                virtual HRESULT STDMETHODCALLTYPE NonStaticMethod( 
+                    /* [out][retval] */ UINT32 *intRetVal) = 0;
+                
+            };
+
+            extern const __declspec(selectany) IID & IID_IActivatableStaticClass = __uuidof(IActivatableStaticClass);
+
+            
+        }  /* end namespace */
+    }  /* end namespace */
+    extern "C" { 
+    
+#else 	/* C style interface */
+
+    typedef struct __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIids )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass * This,
+            /* [out] */ ULONG *iidCount,
+            /* [size_is][size_is][out] */ IID **iids);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass * This,
+            /* [out] */ HSTRING *className);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass * This,
+            /* [out] */ TrustLevel *trustLevel);
+        
+        HRESULT ( STDMETHODCALLTYPE *NonStaticMethod )( 
+            __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass * This,
+            /* [out][retval] */ UINT32 *intRetVal);
+        
+        END_INTERFACE
+    } __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassVtbl;
+
+    interface __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass
+    {
+        CONST_VTBL struct __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClassVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_NonStaticMethod(This,intRetVal)	\
+    ( (This)->lpVtbl -> NonStaticMethod(This,intRetVal) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* ____x_ABI_CReferenceWRLImplementation_CIActivatableStaticClass_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_ReferenceWRLImplementation_0000_0007 */
+/* [local] */ 
+
+#ifndef RUNTIMECLASS_ReferenceWRLImplementation_ActivatableStaticClass_DEFINED
+#define RUNTIMECLASS_ReferenceWRLImplementation_ActivatableStaticClass_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_ReferenceWRLImplementation_ActivatableStaticClass[] = L"ReferenceWRLImplementation.ActivatableStaticClass";
+#endif
+
+
+/* interface __MIDL_itf_ReferenceWRLImplementation_0000_0007 */
+/* [local] */ 
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0007_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0007_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

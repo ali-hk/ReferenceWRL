@@ -17,6 +17,8 @@
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="BasicClassUnitTests.cpp" />
     <ClCompile Include="ParameterizedConstructorClassUnitTests.cpp" />
+    <ClCompile Include="StaticClassUnitTests.cpp" />
+    <ClCompile Include="ActivatableStaticClassUnitTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

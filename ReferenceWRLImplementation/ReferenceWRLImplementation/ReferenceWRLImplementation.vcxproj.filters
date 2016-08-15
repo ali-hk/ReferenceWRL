@@ -33,6 +33,18 @@
     <ClCompile Include="lib\ParameterizedConstructorClass.cpp">
       <Filter>lib</Filter>
     </ClCompile>
+    <ClCompile Include="lib\StaticClassStatics.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\StaticClass.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\ActivatableStaticClassStatics.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\ActivatableStaticClass.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -67,6 +79,18 @@
       <Filter>lib</Filter>
     </ClInclude>
     <ClInclude Include="lib\ParameterizedConstructorClass.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\StaticClassStatics.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\StaticClass.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\ActivatableStaticClassStatics.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\ActivatableStaticClass.h">
       <Filter>lib</Filter>
     </ClInclude>
   </ItemGroup>
