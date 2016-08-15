@@ -58,6 +58,49 @@ namespace ReferenceWRLImplementation
         [default] interface ISomeOtherType;
     }
 
+    // Forward-declare ParameterizedConstructorClass to allow specifying out, retval parameters
+    // and exclusiveto for activation factory (IParameterizedConstructorClassFactory)
+    runtimeclass ParameterizedConstructorClass;
+
+    [uuid(3baa63a9-52d4-4f8d-8640-f1a0a3c7d99c)]
+    [contract(ReferenceContract, 1)]
+    [exclusiveto(ParameterizedConstructorClass)]
+    interface IParameterizedConstructorClassFactory : IInspectable
+    {
+        HRESULT CreateWithBaseTypeParam([in] UINT32 intValue, [out, retval] ParameterizedConstructorClass** parameterizedConstructorClass);
+
+        // WinRT components cannot have multiple constructor methods with the same number of parameters
+        // This is because languages like JavaScript project each as a single parameter constructor
+        // and can't differentiate methods by the types of parameters
+
+        HRESULT CreateWithStringParam([in] HSTRING strValue, [in] UINT32 dummyParam1, [out, retval] ParameterizedConstructorClass** parameterizedConstructorClass);
+
+        HRESULT CreateWithRefTypeParam([in] ISomeOtherType* refTypeValue, [in] UINT32 dummyParam1, [in] UINT32 dummyParam2, [out, retval] ParameterizedConstructorClass** parameterizedConstructorClass);
+    }
+
+    [uuid(5953772c-bcbd-4cf3-b495-5b04677fc779)]
+    [contract(ReferenceContract, 1)]
+    interface IParameterizedConstructorClass : IInspectable
+    {
+        [propget] HRESULT BaseTypeConstructorParam([out,retval] UINT32* intValue);
+
+        [propget] HRESULT StringConstructorParam([out, retval] HSTRING* strValue);
+
+        [propget] HRESULT RefTypeConstructorParam([out, retval] ISomeOtherType** refTypeValue);
+    }
+
+    [contract(ReferenceContract, 1)]
+    // Indicates that the class has a default constructor
+    [activatable(ReferenceContract, 1)]
+    // Indicates that parameterized constructors are provided via the IParameterizedConstructorClassFactory
+    [activatable(IParameterizedConstructorClassFactory, ReferenceContract, 1)]
+    [marshaling_behavior(agile)]
+    [threading(both)]
+    runtimeclass ParameterizedConstructorClass
+    {
+        [default] interface IParameterizedConstructorClass;
+    }
+
     /* TODO:
     -Props
     -Activatable

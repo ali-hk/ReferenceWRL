@@ -17,6 +17,7 @@ IFACEMETHODIMP BasicClass::MethodWithBaseTypeParameter(UINT32 intParam)
     RETURN_HR(S_OK);
 }
 
+_Use_decl_annotations_
 IFACEMETHODIMP BasicClass::MethodWithStringParameter(HSTRING strParam)
 {
     // Note: if storing an HSTIRNG for later use or passing to an async or lambda
@@ -24,12 +25,14 @@ IFACEMETHODIMP BasicClass::MethodWithStringParameter(HSTRING strParam)
     RETURN_HR(WindowsDuplicateString(strParam, _strValue.GetAddressOf()))
 }
 
+_Use_decl_annotations_
 IFACEMETHODIMP BasicClass::MethodWithReferenceTypeParameter(ISomeOtherType *refParam)
 {
     _refValue = refParam;
     RETURN_HR(S_OK);
 }
 
+_Use_decl_annotations_
 IFACEMETHODIMP BasicClass::MethodWithBaseTypeReturnValue(UINT32 *intRetVal)
 {
     RETURN_HR_IF_NULL(E_POINTER, intRetVal);
@@ -39,6 +42,7 @@ IFACEMETHODIMP BasicClass::MethodWithBaseTypeReturnValue(UINT32 *intRetVal)
     RETURN_HR(S_OK);
 }
 
+_Use_decl_annotations_
 IFACEMETHODIMP BasicClass::MethodWithStringReturnValue(HSTRING *strRetVal)
 {
     RETURN_HR_IF_NULL(E_POINTER, strRetVal);
@@ -46,6 +50,7 @@ IFACEMETHODIMP BasicClass::MethodWithStringReturnValue(HSTRING *strRetVal)
     RETURN_HR(_strValue.CopyTo(strRetVal));
 }
 
+_Use_decl_annotations_
 IFACEMETHODIMP BasicClass::MethodWithReferenceTypeReturnValue(ISomeOtherType **refTypeRetVal)
 {
     RETURN_HR_IF_NULL(E_POINTER, refTypeRetVal);

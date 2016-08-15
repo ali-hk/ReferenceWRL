@@ -6,7 +6,7 @@
  /* File created by MIDL compiler version 8.00.0613 */
 /* at Mon Jan 18 19:14:07 2038
  */
-/* Compiler settings for C:\Users\ALKHAY~1\AppData\Local\Temp\ReferenceWRLImplementation.idl-7ac7f2c1:
+/* Compiler settings for C:\Users\ALKHAY~1\AppData\Local\Temp\ReferenceWRLImplementation.idl-87a2dfe2:
     Oicf, W1, Zp8, env=Win64 (32b run), target_arch=AMD64 8.00.0613 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
@@ -84,6 +84,38 @@ namespace ABI {
 #endif /* __cplusplus */
 
 #endif 	/* ____x_ABI_CReferenceWRLImplementation_CISomeOtherType_FWD_DEFINED__ */
+
+
+#ifndef ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_FWD_DEFINED__
+#define ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_FWD_DEFINED__
+typedef interface __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory;
+
+#ifdef __cplusplus
+namespace ABI {
+    namespace ReferenceWRLImplementation {
+        interface IParameterizedConstructorClassFactory;
+    } /* end namespace */
+} /* end namespace */
+
+#endif /* __cplusplus */
+
+#endif 	/* ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_FWD_DEFINED__ */
+
+
+#ifndef ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_FWD_DEFINED__
+#define ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_FWD_DEFINED__
+typedef interface __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass;
+
+#ifdef __cplusplus
+namespace ABI {
+    namespace ReferenceWRLImplementation {
+        interface IParameterizedConstructorClass;
+    } /* end namespace */
+} /* end namespace */
+
+#endif /* __cplusplus */
+
+#endif 	/* ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_FWD_DEFINED__ */
 
 
 /* header files for imported files */
@@ -500,6 +532,17 @@ EXTERN_C const IID IID___x_ABI_CReferenceWRLImplementation_CISomeOtherType;
 #define RUNTIMECLASS_ReferenceWRLImplementation_SomeOtherType_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_ReferenceWRLImplementation_SomeOtherType[] = L"ReferenceWRLImplementation.SomeOtherType";
 #endif
+#ifdef __cplusplus
+namespace ABI {
+namespace ReferenceWRLImplementation {
+class ParameterizedConstructorClass;
+} /*ReferenceWRLImplementation*/
+}
+#endif
+
+#if !defined(____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_INTERFACE_DEFINED__)
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_ReferenceWRLImplementation_IParameterizedConstructorClassFactory[] = L"ReferenceWRLImplementation.IParameterizedConstructorClassFactory";
+#endif /* !defined(____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_INTERFACE_DEFINED__) */
 
 
 /* interface __MIDL_itf_ReferenceWRLImplementation_0000_0002 */
@@ -507,8 +550,328 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Referenc
 
 
 
+
 extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0002_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0002_v0_0_s_ifspec;
+
+#ifndef ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_INTERFACE_DEFINED__
+#define ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_INTERFACE_DEFINED__
+
+/* interface __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory */
+/* [uuid][object] */ 
+
+
+
+/* interface ABI::ReferenceWRLImplementation::IParameterizedConstructorClassFactory */
+/* [uuid][object] */ 
+
+
+EXTERN_C const IID IID___x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    } /* end extern "C" */
+    namespace ABI {
+        namespace ReferenceWRLImplementation {
+            
+            MIDL_INTERFACE("3baa63a9-52d4-4f8d-8640-f1a0a3c7d99c")
+            IParameterizedConstructorClassFactory : public IInspectable
+            {
+            public:
+                virtual HRESULT STDMETHODCALLTYPE CreateWithBaseTypeParam( 
+                    /* [in] */ UINT32 intValue,
+                    /* [out][retval] */ ABI::ReferenceWRLImplementation::IParameterizedConstructorClass **parameterizedConstructorClass) = 0;
+                
+                virtual HRESULT STDMETHODCALLTYPE CreateWithStringParam( 
+                    /* [in] */ HSTRING strValue,
+                    /* [in] */ UINT32 dummyParam1,
+                    /* [out][retval] */ ABI::ReferenceWRLImplementation::IParameterizedConstructorClass **parameterizedConstructorClass) = 0;
+                
+                virtual HRESULT STDMETHODCALLTYPE CreateWithRefTypeParam( 
+                    /* [in] */ ABI::ReferenceWRLImplementation::ISomeOtherType *refTypeValue,
+                    /* [in] */ UINT32 dummyParam1,
+                    /* [in] */ UINT32 dummyParam2,
+                    /* [out][retval] */ ABI::ReferenceWRLImplementation::IParameterizedConstructorClass **parameterizedConstructorClass) = 0;
+                
+            };
+
+            extern const __declspec(selectany) IID & IID_IParameterizedConstructorClassFactory = __uuidof(IParameterizedConstructorClassFactory);
+
+            
+        }  /* end namespace */
+    }  /* end namespace */
+    extern "C" { 
+    
+#else 	/* C style interface */
+
+    typedef struct __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactoryVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIids )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory * This,
+            /* [out] */ ULONG *iidCount,
+            /* [size_is][size_is][out] */ IID **iids);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory * This,
+            /* [out] */ HSTRING *className);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory * This,
+            /* [out] */ TrustLevel *trustLevel);
+        
+        HRESULT ( STDMETHODCALLTYPE *CreateWithBaseTypeParam )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory * This,
+            /* [in] */ UINT32 intValue,
+            /* [out][retval] */ __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass **parameterizedConstructorClass);
+        
+        HRESULT ( STDMETHODCALLTYPE *CreateWithStringParam )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory * This,
+            /* [in] */ HSTRING strValue,
+            /* [in] */ UINT32 dummyParam1,
+            /* [out][retval] */ __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass **parameterizedConstructorClass);
+        
+        HRESULT ( STDMETHODCALLTYPE *CreateWithRefTypeParam )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory * This,
+            /* [in] */ __x_ABI_CReferenceWRLImplementation_CISomeOtherType *refTypeValue,
+            /* [in] */ UINT32 dummyParam1,
+            /* [in] */ UINT32 dummyParam2,
+            /* [out][retval] */ __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass **parameterizedConstructorClass);
+        
+        END_INTERFACE
+    } __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactoryVtbl;
+
+    interface __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory
+    {
+        CONST_VTBL struct __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactoryVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_CreateWithBaseTypeParam(This,intValue,parameterizedConstructorClass)	\
+    ( (This)->lpVtbl -> CreateWithBaseTypeParam(This,intValue,parameterizedConstructorClass) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_CreateWithStringParam(This,strValue,dummyParam1,parameterizedConstructorClass)	\
+    ( (This)->lpVtbl -> CreateWithStringParam(This,strValue,dummyParam1,parameterizedConstructorClass) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_CreateWithRefTypeParam(This,refTypeValue,dummyParam1,dummyParam2,parameterizedConstructorClass)	\
+    ( (This)->lpVtbl -> CreateWithRefTypeParam(This,refTypeValue,dummyParam1,dummyParam2,parameterizedConstructorClass) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassFactory_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_ReferenceWRLImplementation_0000_0003 */
+/* [local] */ 
+
+#if !defined(____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_INTERFACE_DEFINED__)
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_ReferenceWRLImplementation_IParameterizedConstructorClass[] = L"ReferenceWRLImplementation.IParameterizedConstructorClass";
+#endif /* !defined(____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_INTERFACE_DEFINED__) */
+
+
+/* interface __MIDL_itf_ReferenceWRLImplementation_0000_0003 */
+/* [local] */ 
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0003_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0003_v0_0_s_ifspec;
+
+#ifndef ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_INTERFACE_DEFINED__
+#define ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_INTERFACE_DEFINED__
+
+/* interface __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass */
+/* [uuid][object] */ 
+
+
+
+/* interface ABI::ReferenceWRLImplementation::IParameterizedConstructorClass */
+/* [uuid][object] */ 
+
+
+EXTERN_C const IID IID___x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    } /* end extern "C" */
+    namespace ABI {
+        namespace ReferenceWRLImplementation {
+            
+            MIDL_INTERFACE("5953772c-bcbd-4cf3-b495-5b04677fc779")
+            IParameterizedConstructorClass : public IInspectable
+            {
+            public:
+                virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_BaseTypeConstructorParam( 
+                    /* [out][retval] */ UINT32 *intValue) = 0;
+                
+                virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_StringConstructorParam( 
+                    /* [out][retval] */ HSTRING *strValue) = 0;
+                
+                virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_RefTypeConstructorParam( 
+                    /* [out][retval] */ ABI::ReferenceWRLImplementation::ISomeOtherType **refTypeValue) = 0;
+                
+            };
+
+            extern const __declspec(selectany) IID & IID_IParameterizedConstructorClass = __uuidof(IParameterizedConstructorClass);
+
+            
+        }  /* end namespace */
+    }  /* end namespace */
+    extern "C" { 
+    
+#else 	/* C style interface */
+
+    typedef struct __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIids )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass * This,
+            /* [out] */ ULONG *iidCount,
+            /* [size_is][size_is][out] */ IID **iids);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass * This,
+            /* [out] */ HSTRING *className);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass * This,
+            /* [out] */ TrustLevel *trustLevel);
+        
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_BaseTypeConstructorParam )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass * This,
+            /* [out][retval] */ UINT32 *intValue);
+        
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_StringConstructorParam )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass * This,
+            /* [out][retval] */ HSTRING *strValue);
+        
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_RefTypeConstructorParam )( 
+            __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass * This,
+            /* [out][retval] */ __x_ABI_CReferenceWRLImplementation_CISomeOtherType **refTypeValue);
+        
+        END_INTERFACE
+    } __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassVtbl;
+
+    interface __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass
+    {
+        CONST_VTBL struct __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClassVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_get_BaseTypeConstructorParam(This,intValue)	\
+    ( (This)->lpVtbl -> get_BaseTypeConstructorParam(This,intValue) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_get_StringConstructorParam(This,strValue)	\
+    ( (This)->lpVtbl -> get_StringConstructorParam(This,strValue) ) 
+
+#define __x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_get_RefTypeConstructorParam(This,refTypeValue)	\
+    ( (This)->lpVtbl -> get_RefTypeConstructorParam(This,refTypeValue) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* ____x_ABI_CReferenceWRLImplementation_CIParameterizedConstructorClass_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_ReferenceWRLImplementation_0000_0004 */
+/* [local] */ 
+
+#ifndef RUNTIMECLASS_ReferenceWRLImplementation_ParameterizedConstructorClass_DEFINED
+#define RUNTIMECLASS_ReferenceWRLImplementation_ParameterizedConstructorClass_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_ReferenceWRLImplementation_ParameterizedConstructorClass[] = L"ReferenceWRLImplementation.ParameterizedConstructorClass";
+#endif
+
+
+/* interface __MIDL_itf_ReferenceWRLImplementation_0000_0004 */
+/* [local] */ 
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0004_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_ReferenceWRLImplementation_0000_0004_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

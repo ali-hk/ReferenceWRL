@@ -208,6 +208,8 @@
     <ClInclude Include="Foundation\WinStringBuilder.h" />
     <ClInclude Include="Foundation\WinStringWrapper.h" />
     <ClInclude Include="lib\BasicClass.h" />
+    <ClInclude Include="lib\ParameterizedConstructorClass.h" />
+    <ClInclude Include="lib\ParameterizedConstructorClassFactory.h" />
     <ClInclude Include="lib\SomeOtherType.h" />
     <ClInclude Include="Macros.h" />
     <ClInclude Include="pch.h" />
@@ -216,6 +218,8 @@
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="lib\BasicClass.cpp" />
+    <ClCompile Include="lib\ParameterizedConstructorClass.cpp" />
+    <ClCompile Include="lib\ParameterizedConstructorClassFactory.cpp" />
     <ClCompile Include="lib\SomeOtherType.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
