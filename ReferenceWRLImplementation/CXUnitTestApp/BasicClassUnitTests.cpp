@@ -6,7 +6,7 @@ using namespace ReferenceWRLImplementation;
 
 namespace CXUnitTestApp
 {
-    TEST_CLASS(BasicClassUnitTestApp)
+    TEST_CLASS(BasicClassUnitTests)
     {
     public:
         TEST_METHOD(BasicMethodCPPTest)
@@ -60,8 +60,7 @@ namespace CXUnitTestApp
             Assert::AreEqual(expectedVal, refTypeRetVal);
         }
 
-
-        TEST_METHOD(BaseTypePropertyTest)
+        TEST_METHOD(BaseTypePropertyCPPTest)
         {
             UINT32 expectedVal = 10;
             BasicClass^ basicClass = ref new BasicClass();
@@ -69,7 +68,7 @@ namespace CXUnitTestApp
             Assert::AreEqual(expectedVal, basicClass->BaseTypeProperty);
         }
 
-        TEST_METHOD(StringPropertyTest)
+        TEST_METHOD(StringPropertyCPPTest)
         {
             Platform::String^ expectedVal = L"Testing property";
             BasicClass^ basicClass = ref new BasicClass();
@@ -77,7 +76,7 @@ namespace CXUnitTestApp
             Assert::AreEqual(expectedVal, basicClass->StringProperty);
         }
 
-        TEST_METHOD(RefTypePropertyTest)
+        TEST_METHOD(RefTypePropertyCPPTest)
         {
             ISomeOtherType^ expectedVal = ref new SomeOtherType();
             BasicClass^ basicClass = ref new BasicClass();

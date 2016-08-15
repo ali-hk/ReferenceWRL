@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 namespace CSharpUnitTestProject
 {
     [TestClass]
-    public class ParamterizedConstructorClassUnitTests
+    public class ParameterizedConstructorClassUnitTests
     {
         [TestMethod]
         public void DefaultConstructorTest()
         {
             var parameterizedConstructorClass = new ParameterizedConstructorClass();
+            Assert.IsTrue(string.IsNullOrWhiteSpace(parameterizedConstructorClass.StringConstructorParam));
+            Assert.IsNull(parameterizedConstructorClass.RefTypeConstructorParam);
         }
 
         [TestMethod]

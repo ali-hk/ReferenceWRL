@@ -27,11 +27,6 @@ namespace ABI
             DEFINE_PROPERTY_STRING(StringConstructorParam, stringConstructorParam);
 
             DEFINE_PROPERTY_PTR(ISomeOtherType, RefTypeConstructorParam, refTypeConstructorParam);
-/*
-        private:
-            UINT32 _intValue;
-            HSTRING _strValue;
-            Microsoft::WRL::ComPtr<ISomeOtherType> _refValue;*/
         };
 
         ActivatableClassWithFactory(ParameterizedConstructorClass, ParameterizedConstructorClassFactory);

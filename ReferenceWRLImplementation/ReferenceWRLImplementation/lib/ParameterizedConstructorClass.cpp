@@ -7,20 +7,17 @@ using namespace Microsoft::WRL;
 _Use_decl_annotations_
 IFACEMETHODIMP ParameterizedConstructorClass::RuntimeClassInitialize(UINT32 intVal)
 {
-    _baseTypeConstructorParam = intVal;
-    RETURN_HR(S_OK);
+    RETURN_HR(put_BaseTypeConstructorParam(intVal));
 }
 
 _Use_decl_annotations_
 IFACEMETHODIMP ParameterizedConstructorClass::RuntimeClassInitialize(HSTRING strVal)
 {
-    _hsstringConstructorParam.Set(strVal);
-    RETURN_HR(S_OK);
+    RETURN_HR(put_StringConstructorParam(strVal));
 }
 
 _Use_decl_annotations_
 IFACEMETHODIMP ParameterizedConstructorClass::RuntimeClassInitialize(ISomeOtherType *refTypeVal)
 {
-    _sprefTypeConstructorParam = refTypeVal;
-    RETURN_HR(S_OK);
+    RETURN_HR(put_RefTypeConstructorParam(refTypeVal));
 }
