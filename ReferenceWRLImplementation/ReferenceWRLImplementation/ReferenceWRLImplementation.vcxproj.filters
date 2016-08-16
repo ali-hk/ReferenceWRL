@@ -17,39 +17,59 @@
     <Filter Include="lib">
       <UniqueIdentifier>{e676e4f4-4996-4df1-a40e-59f426831855}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lib\ActivatableStaticClass">
+      <UniqueIdentifier>{38f60be0-932d-4727-8bb1-3376e48dbb73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\BasicClass">
+      <UniqueIdentifier>{eac61ac0-fa0d-40db-8873-af3d4224e138}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\ParameterizedActivatableStaticClass">
+      <UniqueIdentifier>{23b2c778-fc00-4000-8f24-8c1afe535fcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\ParameterizedConstructorClass">
+      <UniqueIdentifier>{1a269cbf-4ddb-446f-a21a-c3e19826cbbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\StaticClass">
+      <UniqueIdentifier>{e8d4a860-ad89-4a80-a193-62ac751fac60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\SomeOtherType">
+      <UniqueIdentifier>{45e31ed9-54b0-40e3-ac00-cf210ab9c11a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="dllmain.cpp">
       <Filter>dll</Filter>
     </ClCompile>
-    <ClCompile Include="lib\BasicClass.cpp">
-      <Filter>lib</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\SomeOtherType.cpp" />
-    <ClCompile Include="lib\ParameterizedConstructorClassFactory.cpp">
-      <Filter>lib</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\ParameterizedConstructorClass.cpp">
-      <Filter>lib</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\StaticClassStatics.cpp">
-      <Filter>lib</Filter>
-    </ClCompile>
-    <ClCompile Include="lib\StaticClass.cpp">
-      <Filter>lib</Filter>
-    </ClCompile>
     <ClCompile Include="lib\ActivatableStaticClassStatics.cpp">
-      <Filter>lib</Filter>
+      <Filter>lib\ActivatableStaticClass</Filter>
     </ClCompile>
     <ClCompile Include="lib\ActivatableStaticClass.cpp">
-      <Filter>lib</Filter>
+      <Filter>lib\ActivatableStaticClass</Filter>
     </ClCompile>
-    <ClCompile Include="lib\ParameterizedActivatableStaticClassFactoryAndStatics.cpp">
-      <Filter>lib</Filter>
+    <ClCompile Include="lib\BasicClass.cpp">
+      <Filter>lib\BasicClass</Filter>
     </ClCompile>
     <ClCompile Include="lib\ParameterizedActivatableStaticClass.cpp">
-      <Filter>lib</Filter>
+      <Filter>lib\ParameterizedActivatableStaticClass</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\ParameterizedActivatableStaticClassFactoryAndStatics.cpp">
+      <Filter>lib\ParameterizedActivatableStaticClass</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\ParameterizedConstructorClass.cpp">
+      <Filter>lib\ParameterizedConstructorClass</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\ParameterizedConstructorClassFactory.cpp">
+      <Filter>lib\ParameterizedConstructorClass</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\StaticClass.cpp">
+      <Filter>lib\StaticClass</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\StaticClassStatics.cpp">
+      <Filter>lib\StaticClass</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\SomeOtherType.cpp">
+      <Filter>lib\SomeOtherType</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -77,33 +97,35 @@
       <Filter>Foundation</Filter>
     </ClInclude>
     <ClInclude Include="Macros.h" />
-    <ClInclude Include="lib\BasicClass.h">
-      <Filter>lib</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\SomeOtherType.h" />
-    <ClInclude Include="lib\ParameterizedConstructorClassFactory.h">
-      <Filter>lib</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\ParameterizedConstructorClass.h">
-      <Filter>lib</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\StaticClassStatics.h">
-      <Filter>lib</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\StaticClass.h">
-      <Filter>lib</Filter>
-    </ClInclude>
     <ClInclude Include="lib\ActivatableStaticClassStatics.h">
-      <Filter>lib</Filter>
+      <Filter>lib\ActivatableStaticClass</Filter>
     </ClInclude>
     <ClInclude Include="lib\ActivatableStaticClass.h">
-      <Filter>lib</Filter>
+      <Filter>lib\ActivatableStaticClass</Filter>
     </ClInclude>
-    <ClInclude Include="lib\ParameterizedActivatableStaticClassFactoryAndStatics.h">
-      <Filter>lib</Filter>
+    <ClInclude Include="lib\BasicClass.h">
+      <Filter>lib\BasicClass</Filter>
     </ClInclude>
     <ClInclude Include="lib\ParameterizedActivatableStaticClass.h">
-      <Filter>lib</Filter>
+      <Filter>lib\ParameterizedActivatableStaticClass</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\ParameterizedActivatableStaticClassFactoryAndStatics.h">
+      <Filter>lib\ParameterizedActivatableStaticClass</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\ParameterizedConstructorClass.h">
+      <Filter>lib\ParameterizedConstructorClass</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\ParameterizedConstructorClassFactory.h">
+      <Filter>lib\ParameterizedConstructorClass</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\StaticClass.h">
+      <Filter>lib\StaticClass</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\StaticClassStatics.h">
+      <Filter>lib\StaticClass</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SomeOtherType.h">
+      <Filter>lib\SomeOtherType</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
