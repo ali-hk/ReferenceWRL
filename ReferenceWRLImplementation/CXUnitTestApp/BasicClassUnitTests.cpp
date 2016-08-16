@@ -6,37 +6,37 @@ using namespace ReferenceWRLImplementation;
 
 namespace CXUnitTestApp
 {
-    TEST_CLASS(BasicClassUnitTests)
+    TEST_CLASS(BasicClassCPPUnitTests)
     {
     public:
         TEST_METHOD(BasicMethodCPPTest)
         {
-            BasicClass^ basicClass = ref new BasicClass();
+            auto basicClass = ref new BasicClass();
             basicClass->BasicMethod();
         }
 
         TEST_METHOD(MethodWithBaseTypeParamCPPTest)
         {
-            BasicClass^ basicClass = ref new BasicClass();
+            auto basicClass = ref new BasicClass();
             basicClass->MethodWithBaseTypeParameter(5);
         }
 
         TEST_METHOD(MethodWithStringParamCPPTest)
         {
-            BasicClass^ basicClass = ref new BasicClass();
+            auto basicClass = ref new BasicClass();
             basicClass->MethodWithStringParameter(L"Testing");
         }
 
         TEST_METHOD(MethodWithRefTypeParamCPPTest)
         {
-            BasicClass^ basicClass = ref new BasicClass();
+            auto basicClass = ref new BasicClass();
             basicClass->MethodWithReferenceTypeParameter(ref new SomeOtherType());
         }
 
         TEST_METHOD(MethodWithBaseTypeRetValCPPTest)
         {
             UINT32 expectedVal = 5;
-            BasicClass^ basicClass = ref new BasicClass();
+            auto basicClass = ref new BasicClass();
             basicClass->MethodWithBaseTypeParameter(5);
             auto baseTypeRetVal = basicClass->MethodWithBaseTypeReturnValue();
             Assert::AreEqual(expectedVal, baseTypeRetVal);
@@ -45,7 +45,7 @@ namespace CXUnitTestApp
         TEST_METHOD(MethodWithStringRetValCPPTest)
         {
             Platform::String^ expectedVal = L"Testing";
-            BasicClass^ basicClass = ref new BasicClass();
+            auto basicClass = ref new BasicClass();
             basicClass->MethodWithStringParameter(expectedVal);
             auto strRetVal = basicClass->MethodWithStringReturnValue();
             Assert::AreEqual(expectedVal, strRetVal);
@@ -54,7 +54,7 @@ namespace CXUnitTestApp
         TEST_METHOD(MethodWithRefTypeRetValCPPTest)
         {
             ISomeOtherType^ expectedVal = ref new SomeOtherType();
-            BasicClass^ basicClass = ref new BasicClass();
+            auto basicClass = ref new BasicClass();
             basicClass->MethodWithReferenceTypeParameter(expectedVal);
             auto refTypeRetVal = basicClass->MethodWithReferenceTypeReturnValue();
             Assert::AreEqual(expectedVal, refTypeRetVal);
@@ -63,7 +63,7 @@ namespace CXUnitTestApp
         TEST_METHOD(BaseTypePropertyCPPTest)
         {
             UINT32 expectedVal = 10;
-            BasicClass^ basicClass = ref new BasicClass();
+            auto basicClass = ref new BasicClass();
             basicClass->BaseTypeProperty = expectedVal;
             Assert::AreEqual(expectedVal, basicClass->BaseTypeProperty);
         }
@@ -71,7 +71,7 @@ namespace CXUnitTestApp
         TEST_METHOD(StringPropertyCPPTest)
         {
             Platform::String^ expectedVal = L"Testing property";
-            BasicClass^ basicClass = ref new BasicClass();
+            auto basicClass = ref new BasicClass();
             basicClass->StringProperty = expectedVal;
             Assert::AreEqual(expectedVal, basicClass->StringProperty);
         }
@@ -79,7 +79,7 @@ namespace CXUnitTestApp
         TEST_METHOD(RefTypePropertyCPPTest)
         {
             ISomeOtherType^ expectedVal = ref new SomeOtherType();
-            BasicClass^ basicClass = ref new BasicClass();
+            auto basicClass = ref new BasicClass();
             basicClass->RefTypeProperty = expectedVal;
             Assert::AreEqual(expectedVal, basicClass->RefTypeProperty);
         }

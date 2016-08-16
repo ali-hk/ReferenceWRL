@@ -158,6 +158,47 @@ namespace ReferenceWRLImplementation
         [default] interface IActivatableStaticClass;
     }
 
+    // ParameterizedActivatableStaticClass is projected as a (non-static) class with
+    // static methods and non-default constructors
+
+    // Forward-declare ParameterizedActivatableStaticClass to allow specifying exclusiveto
+    // for static factory
+    runtimeclass ParameterizedActivatableStaticClass;
+
+    [uuid(857c9747-94b8-4b20-b508-43d35011697f)]
+    [contract(ReferenceContract, 1)]
+    [exclusiveto(ParameterizedActivatableStaticClass)]
+    interface IParemeterizedActivatableStaticClassStatics : IInspectable
+    {
+        HRESULT StaticMethod([out, retval] UINT32* intRetVal);
+    }
+
+    [uuid(6ab20113-bc49-4412-9c5a-a821a41976c9)]
+    [contract(ReferenceContract, 1)]
+    [exclusiveto(ParameterizedActivatableStaticClass)]
+    interface IParemeterizedActivatableStaticClassFactory : IInspectable
+    {
+        HRESULT CreateWithParam([in] UINT32 intValue, [out, retval] ParameterizedActivatableStaticClass** parameterizedActivatableStaticClass);
+    }
+
+    [uuid(8ad5d0f2-e3fc-4eda-a2c3-f335a7631613)]
+    [contract(ReferenceContract, 1)]
+    interface IParameterizedActivatableStaticClass : IInspectable
+    {
+        HRESULT NonStaticMethod([out, retval] UINT32* intRetVal);
+    }
+
+    [contract(ReferenceContract, 1)]
+    [activatable(ReferenceContract, 1)]
+    [activatable(IParemeterizedActivatableStaticClassFactory, ReferenceContract, 1)]
+    [static(IParemeterizedActivatableStaticClassStatics, ReferenceContract, 1)]
+    [marshaling_behavior(agile)]
+    [threading(both)]
+    runtimeclass ParameterizedActivatableStaticClass
+    {
+        [default] interface IParameterizedActivatableStaticClass;
+    }
+
     /* TODO:
     -Props
     -Activatable

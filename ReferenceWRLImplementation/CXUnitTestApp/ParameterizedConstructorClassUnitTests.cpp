@@ -6,12 +6,12 @@ using namespace ReferenceWRLImplementation;
 
 namespace CXUnitTestApp
 {
-    TEST_CLASS(ParameterizedConstructorClassUnitTests)
+    TEST_CLASS(ParameterizedConstructorClassCPPUnitTests)
     {
     public:
         TEST_METHOD(DefaultConstructorCPPTest)
         {
-            ParameterizedConstructorClass^ parameterizedConstructorClass = ref new ParameterizedConstructorClass();
+            auto parameterizedConstructorClass = ref new ParameterizedConstructorClass();
             Assert::IsNull(parameterizedConstructorClass->StringConstructorParam);
             Assert::IsNull(parameterizedConstructorClass->RefTypeConstructorParam);
         }
@@ -19,21 +19,21 @@ namespace CXUnitTestApp
         TEST_METHOD(MethodWithBaseTypeRetValCPPTest)
         {
             UINT32 expectedVal = 15;
-            ParameterizedConstructorClass^ parameterizedConstructorClass = ref new ParameterizedConstructorClass(expectedVal);
+            auto parameterizedConstructorClass = ref new ParameterizedConstructorClass(expectedVal);
             Assert::AreEqual(expectedVal, parameterizedConstructorClass->BaseTypeConstructorParam);
         }
 
         TEST_METHOD(MethodWithStringRetValCPPTest)
         {
             Platform::String^ expectedVal = L"Testing constructor";
-            ParameterizedConstructorClass^ parameterizedConstructorClass = ref new ParameterizedConstructorClass(expectedVal, INT_MIN);
+            auto parameterizedConstructorClass = ref new ParameterizedConstructorClass(expectedVal, INT_MIN);
             Assert::AreEqual(expectedVal, parameterizedConstructorClass->StringConstructorParam);
         }
 
         TEST_METHOD(MethodWithRefTypeRetValCPPTest)
         {
             ISomeOtherType^ expectedVal = ref new SomeOtherType();
-            ParameterizedConstructorClass^ parameterizedConstructorClass = ref new ParameterizedConstructorClass(expectedVal, INT_MIN, INT_MIN);
+            auto parameterizedConstructorClass = ref new ParameterizedConstructorClass(expectedVal, INT_MIN, INT_MIN);
             Assert::AreEqual(expectedVal, parameterizedConstructorClass->RefTypeConstructorParam);
         }
     };

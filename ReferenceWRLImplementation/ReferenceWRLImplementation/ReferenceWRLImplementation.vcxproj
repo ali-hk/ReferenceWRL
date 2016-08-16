@@ -210,8 +210,10 @@
     <ClInclude Include="lib\ActivatableStaticClass.h" />
     <ClInclude Include="lib\ActivatableStaticClassStatics.h" />
     <ClInclude Include="lib\BasicClass.h" />
+    <ClInclude Include="lib\ParameterizedActivatableStaticClass.h" />
     <ClInclude Include="lib\ParameterizedConstructorClass.h" />
     <ClInclude Include="lib\ParameterizedConstructorClassFactory.h" />
+    <ClInclude Include="lib\ParameterizedActivatableStaticClassFactoryAndStatics.h" />
     <ClInclude Include="lib\SomeOtherType.h" />
     <ClInclude Include="lib\StaticClass.h" />
     <ClInclude Include="lib\StaticClassStatics.h" />
@@ -224,8 +226,10 @@
     <ClCompile Include="lib\ActivatableStaticClass.cpp" />
     <ClCompile Include="lib\ActivatableStaticClassStatics.cpp" />
     <ClCompile Include="lib\BasicClass.cpp" />
+    <ClCompile Include="lib\ParameterizedActivatableStaticClass.cpp" />
     <ClCompile Include="lib\ParameterizedConstructorClass.cpp" />
     <ClCompile Include="lib\ParameterizedConstructorClassFactory.cpp" />
+    <ClCompile Include="lib\ParameterizedActivatableStaticClassFactoryAndStatics.cpp" />
     <ClCompile Include="lib\SomeOtherType.cpp" />
     <ClCompile Include="lib\StaticClass.cpp" />
     <ClCompile Include="lib\StaticClassStatics.cpp" />

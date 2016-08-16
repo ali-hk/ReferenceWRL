@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivatableStaticClassUnitTests.cs" />
+    <Compile Include="ParameterizedActivatableStaticClassUnitTests.cs" />
     <Compile Include="ParameterizedConstructorClassUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticClassUnitTests.cs" />

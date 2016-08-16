@@ -6,7 +6,7 @@ using namespace ReferenceWRLImplementation;
 
 namespace CXUnitTestApp
 {
-    TEST_CLASS(StaticClassUnitTests)
+    TEST_CLASS(StaticClassCPPUnitTests)
     {
     public:
         TEST_METHOD(StaticMethodWithNoParametersCPPTest)

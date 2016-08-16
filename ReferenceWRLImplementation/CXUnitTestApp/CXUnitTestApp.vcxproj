@@ -188,6 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ActivatableStaticClassUnitTests.cpp" />
+    <ClCompile Include="ParameterizedActivatableStaticClassUnitTests.cpp" />
     <ClCompile Include="ParameterizedConstructorClassUnitTests.cpp" />
     <ClCompile Include="StaticClassUnitTests.cpp" />
     <ClCompile Include="UnitTestApp.xaml.cpp">
